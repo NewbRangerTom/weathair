@@ -70,8 +70,6 @@ app.get('/air_qual/:latlon', async (request, response) => {
     const latlon = request.params.latlon.split(',');
     const lat = latlon[0];
     const lon = latlon[1];
-    // const lat = 27.2621;
-    // const lon = -80.3835;
     console.log(lat, lon);
    
     const air_qual_url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${ow_api_key}`
